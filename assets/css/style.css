@@ -109,6 +109,7 @@ body {
 .titulo-pagina {
     font-size: 1.5rem;
     font-weight: 700;
+    margin-bottom: 16px;
 }
 
 .cartao {
@@ -120,16 +121,25 @@ body {
 
 .cartao_conteudo {
     padding: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}
+
+.cartao_destaque {
+    grid-column: span 2;
 }
 
 .cartao_titulo {
     font-size: 1.2rem;
     font-weight: 700;
+    grid-column: span 2;
 }
 
 .cartao_perfil {
     color: #95999c;
     font-size: o.9rem;
+    grid-column: span 2;
 }
 
 .cartao_info {
@@ -138,12 +148,12 @@ body {
     color: #95999c;
 }
 
-.cartao_info-tempo {
+.cartao_info-tempo::before {
     content: "\e90c";
     margin-right: 8px;
 }
 
-.cartao_info-visualizacao {
+.cartao_info-visualizacao::before {
     content: "\e90f";
     margin-right: 8px;
 }
@@ -166,8 +176,11 @@ body {
 
 .cartao_botao-destaque {
     width: 100%;
+    grid-column: span 2;
 }
 
 .cartao_botao-destaque::before {
+    content: "\e90b";
+    font-size: 24px;
     margin-right: 8px;
 }
