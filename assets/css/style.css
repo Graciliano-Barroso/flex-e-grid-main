@@ -32,6 +32,10 @@ body {
     width: 40px;
 }
 
+.cabecalho_logo {
+    display: none;
+}
+
 .menu-lateral {
     display: flex;
     flex-direction: column;
@@ -205,4 +209,56 @@ body {
 .titulo-secao {
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    .cabecalho {
+        background-color: #1D232A;
+        display: grid;
+        column-gap: 32px;
+        grid-template-columns: 1fr auto;
+        padding: 16px 60px;
+        height: 80px;
+        box-sizing: border-box;
+    }
+
+    .cabecalho_menu {
+        display: none;
+    }
+
+    .cabecalho_logo {
+        display: none;
+    }
+
+    .cabecalho_perfil {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 8px;
+        align-items: center;
+        justify-self: flex-end;
+        color: #95999c;
+        padding: 8px 32px;
+        border-right: 1px solid #95999c;
+    }
+
+    .cabecalho_perfil::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url(../img/profile_2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .cabecalho_perfil {
+        content: "\e90d";
+        color: #ffffff;
+        font-size: 1.5rem;
+    }
 }
