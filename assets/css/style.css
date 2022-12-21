@@ -281,8 +281,12 @@ body {
         padding: 16px 60px;
         grid-column: 2;
         grid-template-areas:
-        "titulo-pagina titulo-pagina titulo-pagina"
-        "destaque destaque recentes";
+            "titulo-pagina titulo-pagina titulo-pagina"
+            "destaque-video destaque-video videos-recentes"
+            "secao-videos secao-videos secao-videos"
+            "produtos-recentes destaque-produto destaque-produto"
+            "secao-produtos secao-produtos secao-produtos"
+        ;
     }
 
     .titulo-pagina {
@@ -290,7 +294,7 @@ body {
     }
 
     .cartao-destaque {
-        grid-area: destaque;
+        grid-area: destaque-video;
     }
 
     .cartao-recentes {
@@ -301,7 +305,23 @@ body {
         width: 256px;
         padding: 16px;
         box-sizing: border-box;
-        grid-area: recentes;
+        grid-area: videos-recentes;
+    }
+
+    .secao-videos {
+        grid-area: secao-videos;
+    }
+    
+    .produtos-recentes {
+        grid-area: produtos-recentes;
+    }
+
+    .destaque-produtos {
+        grid-area: destaque-produto;
+    }
+
+    .secao-produtos {
+        grid-area: secao-produtos;
     }
 
     .cartao-recentes .cartao_titulo {
@@ -341,5 +361,9 @@ body {
     .carato_item-perfil {
         font-size: 0.8rem;
         color: #95999c;
+    }
+
+    .secao {
+        display: flex;
     }
 }
